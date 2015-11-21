@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>DEMo Docs</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="shortcut icon" href="docs.png">
+<script type="text/javascript">
+document.getElementById("op1").style.fontSize ="25px";
+
+var changeFont = function(font){
+  console.log(font.value)
+    document.getElementById("blog").style.fontFamily = font.value;
+}
+
+function insertText(elemID, text)
+    {
+        var elem = document.getElementById(elemID);
+        elem.innerHTML += text;
+      }
+function addimg()
+    {
+        var img = document.getElementById('imgurl').value;
+        document.execCommand('insertImage', 'random', img);
+      }  
+function addlink()
+    {
+        var link = document.getElementById('link').value;
+        document.execCommand('createLink', 'random', link);
+      }         
+
+    </script>
+   
+    </head>
+    <body style="background-color:lightgray;">
+<!--<button id="save" class="download">Save</button> <div id="text" contenteditable="true"></div><br>-->
+<div style="width:2000px;background-color:lightblue;border-style: solid;position: fixed;">
+<br>
+&nbsp;<button id="toggle_bolt" onclick="document.execCommand('undo');"><img src="undo.png" height="42" width="42"></button>
+<button id="toggle_bolt" onclick="document.execCommand('redo');"><img src="redo.png" height="42" width="42"></button>
+<button id="toggle_bolt" onclick="document.execCommand('bold');"><b>B</b></button>
+<button id="toggle_bolt" onclick="document.execCommand('italic');"><i>I</i></button>
+<button id="toggle_bolt" onclick="document.execCommand('underline');"><u>U</u></button>
+<button id="toggle_bolt" onclick="document.execCommand('strikeThrough');"><strike>S</strike></button>
+<button id="toggle_bolt" onclick="document.execCommand('insertUnorderedList');">Add Bulleted List</button>
+<button id="toggle_bolt" onclick="document.execCommand('insertOrderedList');">Add Numbered List</button>
+<button id="toggle_bolt" onclick="document.execCommand('indent');">Indent</button>
+<button id="toggle_bolt" onclick="document.execCommand('superscript');">Superscript</button>
+<input id="link" type="text" Placeholder="Link URL...">
+<button id="toggle_bolt" onclick="addlink()">Add Link</button>
+<input id="imgurl" type="text" Placeholder="Image URL...">
+<button id="toggle_bolt" onclick="addimg()">Add Image</button>
+<button class="download">Save</button>
+Font:<br>
+<div class="styled-select">
+<select id="input-font" class="input"  onchange="changeFont (this);">
+      <option value="Times New Roman" selected ="selected">Times New Roman</option>
+      <option value="Arial">Arial</option>
+      <option value="Courier New">Courier New</option>
+      <option value="Lucida Console">Lucida Console</option>
+      <option value="Verdana">Verdana</option>
+      <option value="Comic Sans MS">Comic Sans MS</option>
+</select>
+</div>
+Font Size:<br>
+<button id="toggle_bolt" onclick="document.execCommand('fontSize', 'random', 1);">1</button>
+<button id="toggle_bolt" onclick="document.execCommand('fontSize', 'random', 2);">2</button>
+<button id="toggle_bolt" onclick="document.execCommand('fontSize', 'random', 3);">3</button>
+<button id="toggle_bolt" onclick="document.execCommand('fontSize', 'random', 4);">4</button>
+<button id="toggle_bolt" onclick="document.execCommand('fontSize', 'random', 5);">5</button>
+<button id="toggle_bolt" onclick="document.execCommand('fontSize', 'random', 6);">6</button>
+<button id="toggle_bolt" onclick="document.execCommand('fontSize', 'random', 7);">7</button>
+<br>
+Font Color:<br>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'red');">Red</button>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'orange');">Orange</button>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'yellow');">Yellow</button>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'green');">Green</button>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'blue');">Blue</button>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'purple');">Purple</button>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'pink');">Pink</button>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'hotpink');">Hot Pink</button>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'gray');">Gray</button>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'lightgray');">Light Gray</button>
+<button id="toggle_bolt" onclick="document.execCommand('foreColor', 'random', 'black');">Black</button>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><div id="blog" placeholder="Message..." name="msg" style="background-color:white; border-style: solid;margin: 0px; width: 900px; height: 1400px;" cols="26" rows="4" contentEditable="true"></center></div>
+<br>
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+$('.download').on('click', function(){
+       $('<a />').attr({
+              download: 'Untitled.html', 
+              href: "data:text/html," + $('#blog').html() 
+       })[0].click()
+    });     
+</script>
+</body>
+</html>
