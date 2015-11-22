@@ -1,24 +1,77 @@
-.styled-select select {
+select {
    background: #525252;
    color: white;
-   width: 268px;
+   width: 180px;
    padding: 5px;
-   font-size: 12px;
+   font-size: 18px;
    line-height: 1;
    border: 0;
    border-radius: 0;
-   height: 24px;
+   height: 32px;
    -webkit-appearance: none;
-   }
-button {
-    height:25px;
-    background-color: #525252;
-    color: white;
-    border-style: solid;
+   }   
+.main-functions {
+    background-color: transparent;
+    color: gray;
+    font-size: 18px;
+    border-style: none;
 }
-button:hover {
+.main-functions:hover {
     background-color: lightgray;
     color: gray;
+	border-style: none;
+}
+.download {
+    background-color: transparent;
+    color: transparent;
+    border-style: none;
+}
+.download:hover {
+    background-color: lightgray;
+    color: gray;
+	border-style: none;
+}
+.bui {
+    background-color: transparent;
+    font-size: 24px;
+    border-style: none;
+}
+.bui:hover {
+    color: gray;
+	border-style: none;
+}
+.size {
+    background-color: transparent;
+    color: black;
+    border-style: solid;
+    font-size: 18px;
+}
+.size:hover {
+    background-color: gray;
+    color: lightgray;
 	border-style: solid;
 }
-
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Open File...';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
