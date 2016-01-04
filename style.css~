@@ -13,7 +13,7 @@ select {
 .main-functions {
     background-color: transparent;
     color: gray;
-    font-size: 18px;
+    font-size: 22px;
     border-style: none;
 }
 .main-functions:hover {
@@ -74,4 +74,8 @@ select {
 }
 .custom-file-input:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+Document {
+    background-color:white;
+    
 }

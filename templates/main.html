@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>DEMo Docs</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<link rel="shortcut icon" href="static/docs.png">
+</head>
+<body>
+<h2>Name your file:</h2>
+    <form action="/main" method="post">
+        <label>Filename: <input type="text" name="SaveAs"/></label><br/>
+        <input type="submit" value="Submit"><br/>
+</form>
+</body>
+</html>

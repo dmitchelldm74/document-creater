@@ -1,8 +1,8 @@
 <html>
 <head>
 <title>DEMo Docs</title>
-<link rel=stylesheet type=text/css href="style.css">
-<link rel="shortcut icon" href="docs.png">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<link rel="shortcut icon" href="static/docs.png">
 <script type="text/javascript">
 var changeFont = function(font){
   console.log(font.value)
@@ -58,7 +58,7 @@ var openFile = function(event) {
 <div style="width:2000px;background-color:lightblue;border-style: 1px solid;position: fixed;">
 <br>
 
-<input id="SaveAs" type="text" style="font-size: 20px;"Placeholder="Filename..."><button class="main-functions"id="download">Save As&nbsp&nbsp<img src="static/save.png" height="20px" width="20px"></button>
+<input id="SaveAs" type="text" style="font-size: 20px;" value="{{ info['dld'] }}"Placeholder="Filename..."><button class="main-functions"id="download">Save As&nbsp&nbsp<img src="static/save.png" height="20px" width="20px"></button>
 &nbsp&nbsp&nbsp&nbsp<input class="custom-file-input"type='file' accept='text/plain' onchange='openFile(event)'><br>
 
 &nbsp;<button class="main-functions" id="toggle_bolt" onclick="document.execCommand('undo');"><img src="static/undo.png" height="42" width="42"></button>
@@ -127,8 +127,8 @@ Font Size:
 <br>
 <br>
 <br>
-
-<center><div id="blog"style="background-color:white;border-style: solid;margin: 0px; width: 900px;height: 1400px;" cols="26" rows="4" contentEditable="true"></div></center>
+<center><div id="blog"style="background-color:white;border-style: solid;margin: 0px; width: 900px;" cols="30" rows="4" contentEditable="true"></div></center>
+<br>
 <script type="text/javascript">
   var supported = 'This text will be saved locally, forever.',
       unsupported = 'Oh no! Your browser does not support localStorage.';
@@ -148,16 +148,16 @@ Font Size:
 <script>
 var fn = document.getElementById('SaveAs').value; 
 </script>
-<script src="jquery-1.11.2.min.js"></script>
+<script src="{{ url_for('static', filename='jquery-1.11.2.min.js') }}"></script>
 <script>
 $('#download').on('click', function(){
        $('<a />').attr({
-               
-              download: 'Untitled', 
-              href: "data:text/html," + $('#blog').html() 
+            {% if info %}
+            download: "{{ info['dld'] }}", 
+            href: "data:text/html," + $('#blog').html() 
        })[0].click()
     });
-        
+    {% endif %}    
 </script>
 </body>
 </html>

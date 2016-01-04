@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>DEMo Docs</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel=stylesheet type=text/css href="style.css">
 <link rel="shortcut icon" href="docs.png">
 <script type="text/javascript">
 var changeFont = function(font){
@@ -57,28 +57,29 @@ var openFile = function(event) {
 <!--<button id="save" class="download">Save</button> <div id="text" contenteditable="true"></div><br>-->
 <div style="width:2000px;background-color:lightblue;border-style: 1px solid;position: fixed;">
 <br>
-<input id="SaveAs" type="text" style="font-size: 20px;"Placeholder="Filename..."><button class="main-functions"id="download">Save As&nbsp&nbsp<img src="save.png" height="20px" width="20px"></button>
-<input class="custom-file-input"type='file' accept='text/plain' onchange='openFile(event)'><br>
 
-&nbsp;<button class="main-functions" id="toggle_bolt" onclick="document.execCommand('undo');"><img src="undo.png" height="42" width="42"></button>
-<button class="main-functions" id="toggle_bolt" onclick="document.execCommand('redo');"><img src="redo.png" height="42" width="42"></button>
+<input id="SaveAs" type="text" style="font-size: 20px;"Placeholder="Filename..."><button class="main-functions"id="download">Save As&nbsp&nbsp<img src="static/save.png" height="20px" width="20px"></button>
+&nbsp&nbsp&nbsp&nbsp<input class="custom-file-input"type='file' accept='text/plain' onchange='openFile(event)'><br>
+
+&nbsp;<button class="main-functions" id="toggle_bolt" onclick="document.execCommand('undo');"><img src="static/undo.png" height="42" width="42"></button>
+<button class="main-functions" id="toggle_bolt" onclick="document.execCommand('redo');"><img src="static/redo.png" height="42" width="42"></button>
 <button class="bui"id="toggle_bolt" onclick="document.execCommand('bold');"><b>B</b></button>
 <button class="bui"id="toggle_bolt" onclick="document.execCommand('italic');"><i>I</i></button>
 <button class="bui"id="toggle_bolt" onclick="document.execCommand('underline');"><u>U</u></button>
 <button class="bui"id="toggle_bolt" onclick="document.execCommand('strikeThrough');"><strike>S</strike></button>
-<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('insertUnorderedList');"><img src="bullet-list.png" height="18px" width="18px"></button>
-<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('insertOrderedList');"><img src="imglist.png" height="18px" width="18px"></button>
-<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('indent');"><img src="indent.png" height="18px" width="18px"></button>
-<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('superscript');"><img src="superscript.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('insertUnorderedList');"><img src="static/bullet-list.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('insertOrderedList');"><img src="static/imglist.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('indent');"><img src="static/indent.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('superscript');"><img src="static/superscript.png" height="18px" width="18px"></button>
 <input id="link" type="text" style="font-size: 20px;"Placeholder="Link URL...">
-<button class="main-functions"id="toggle_bolt" onclick="addlink()"><img src="link.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="addlink()"><img src="static/link.png" height="18px" width="18px"></button>
 <input id="imgurl" type="text" style="font-size: 20px;"Placeholder="Image URL...">
-<button class="main-functions"id="toggle_bolt" onclick="addimg()"><img src="image.png" height="18px" width="18px"></button>
-<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('enableObjectResizing');"><img src="resize.png" height="18px" width="18px"></button>
-<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('justifyLeft');"><img src="left.png" height="18px" width="18px"></button>
-<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('justifyRight');"><img src="right.png" height="18px" width="18px"></button>
-<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('justifyCenter');"><img src="center.png" height="18px" width="18px"></button>
-<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('justifyFull');"><img src="justify.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="addimg()"><img src="static/image.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('enableObjectResizing');"><img src="static/resize.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('justifyLeft');"><img src="static/left.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('justifyRight');"><img src="static/right.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('justifyCenter');"><img src="static/center.png" height="18px" width="18px"></button>
+<button class="main-functions"id="toggle_bolt" onclick="document.execCommand('justifyFull');"><img src="static/justify.png" height="18px" width="18px"></button>
 
 <select id="input-font" class="input"  onchange="font(this);">
       <option value="Arial" selected ="selected">Font...</option>  
@@ -127,16 +128,36 @@ Font Size:
 <br>
 <br>
 
-<center><div id="blog"style="background-color:white; border-style: solid;margin: 0px; width: 900px; height: 1400px;" cols="26" rows="4" contentEditable="true"></div></center>
+<center><div id="blog"style="background-color:white;border-style: solid;margin: 0px; width: 900px;height: 1400px;" cols="26" rows="4" contentEditable="true"></div></center>
+<script type="text/javascript">
+  var supported = 'This text will be saved locally, forever.',
+      unsupported = 'Oh no! Your browser does not support localStorage.';
+  if (window.localStorage) {
+      var p = document.querySelector('#blog');
+      if (localStorage.text == null) {
+          localStorage.text = p.innerHTML = supported;
+      } else {
+          p.innerHTML = localStorage.text;
+      }
+      p.addEventListener('keyup', function(){ localStorage.text = p.innerHTML; }, false);
+  } else {
+      document.getElementById('blog').innerHTML = unsupported;
+  }
+</script>
 <br>
+<script>
+var fn = document.getElementById('SaveAs').value; 
+</script>
 <script src="jquery-1.11.2.min.js"></script>
 <script>
 $('#download').on('click', function(){
        $('<a />').attr({
-              download: 'Untitled.html', 
+               
+              download: 'Untitled', 
               href: "data:text/html," + $('#blog').html() 
        })[0].click()
-    });     
+    });
+        
 </script>
 </body>
 </html>
